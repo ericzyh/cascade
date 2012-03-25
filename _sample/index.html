@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>easy sample</title>
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.5.2/jquery.js" ></script>
+<script src="../src/jquery.cascade.min.js"></script>  
+<style> 
+.item {
+font-size: 20px;
+color: red;
+background: #ccc;
+padding: 24px;
+margin: 10px 0px;
+text-align: center;
+}
+.item.t2{
+padding:30px;
+}
+</style>
+</head>
+<body>
+<button>add</button>
+<div id="pubu">
+<div class="item">1</div>
+<div class="item">3</div>
+<div class="item">4</div>
+<div class="item">5</div>
+<div class="item">6</div>
+<div class="item">7</div>
+<div class="item">8</div>
+<div class="item">9</div>
+<div class="item">10</div>
+<div class="item">11</div>
+<div class="item">12</div>
+<div class="item">13</div>
+</div>
+</body>
+</html>
+<script>
+var j = 100;
+var cas = $("#pubu").cascade({"item":".item","column":"4","margin":"3"});
+$("button").click(function(){
+var t2 = "";
+if(j%3==0){t2="t2"};
+cas.append($("<div class='item "+t2+"'>"+(j++)+"</div>"));
+}
+);
+</script>
+
